@@ -1,0 +1,69 @@
+<section class="trending">
+    <h1>What's popular this week - {{type | uppercase}}</h1>
+    <!-- <ul>
+        <li *ngFor="let item of trendingData; let i=index">
+            <img *ngIf="isPerson else elseBlock" src="https://image.tmdb.org/t/p/original/{{item.profile_path}}" alt="{{item.name}}'s picture">
+            <div *ngIf="isPerson" class="info">
+                <h3>#{{i+1}}<br> {{item.name}}</h3>
+            </div>
+            <div *ngIf="isMovie" class="info">
+                <h3>#{{i+1}}<br>{{item.title}}</h3>
+            </div>
+            <div *ngIf="isTv" class="info">
+                <h3>#{{i+1}}<br>{{item.name}}</h3>
+            </div>
+            
+            <ng-template #elseBlock>
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.original_title}} poster">
+            </ng-template>
+        </li>
+    </ul> -->
+
+    <div class="list" *ngIf="isMovie">
+        <!-- <a class="item" *ngFor="let item of trendingData; let i = index">
+            <img *ngIf="isPerson" src="https://image.tmdb.org/t/p/original/{{item.profile_path}}"
+                alt="{{item.name}}'s picture">
+                <img *ngIf="isMovie" src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.title}} poster">
+                <img *ngIf="isTv" src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.name}} poster">
+            <div *ngIf="isPerson" class="info">
+                <h3>#{{i+1}}<br>{{item.name}}</h3>
+            </div>
+
+            <div *ngIf="isMovie" class="info">
+                <h3>#{{i+1}}<br>{{item.title}}</h3>
+            </div>
+
+            <div *ngIf="isTv" class="info">
+                <h3>#{{i+1}}<br>{{item.name}}</h3>
+            </div>
+        </a> -->
+
+        <a href="#" class="item" *ngFor="let item of trendingData; let i = index" routerLink="/movie/{{item.id}}">
+            <img  src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.title}} poster">
+
+            <div class="info">
+                <h3>#{{i+1}}<br>{{item.title}}</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="list" *ngIf="isTv">
+        <a href="#" class="item" *ngFor="let item of trendingData; let i = index" routerLink="/tv/{{item.id}}">
+            <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.name}} poster">
+
+            <div class="info">
+                <h3>#{{i+1}}<br>{{item.name}}</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="list" *ngIf="isPerson">
+        <a href="#" class="item" *ngFor="let item of trendingData; let i = index" routerLink="/person/{{item.id}}">
+            <img src="https://image.tmdb.org/t/p/original/{{item.profile_path}}" alt="{{item.name}}">
+
+            <div class="info">
+                <h3>#{{i+1}}<br>{{item.name}}</h3>
+            </div>
+        </a>
+    </div>
+</section>

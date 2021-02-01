@@ -1,0 +1,13 @@
+<section class="searchResult">
+    <ul *ngIf="isMovie">
+        <li *ngFor="let item of results">
+            <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.title}} poster">
+        </li>
+    </ul>
+
+    <ul *ngIf="isTv">
+        <li *ngFor="let item of results">
+            <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="{{item.name}} poster">
+        </li>
+    </ul>
+</section>

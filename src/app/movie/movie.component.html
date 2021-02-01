@@ -1,0 +1,28 @@
+<main class="movieSection"
+    [style.background-image]="'url(https://image.tmdb.org/t/p/original/'+movieData['backdrop_path']+')'">
+    <div class="left">
+        <img src="https://image.tmdb.org/t/p/original/{{movieData['poster_path']}}" alt="{{movieData['title']}} poster">
+        <div class="links">
+            <a href="https://www.imdb.com/title/{{movieData['imdb_id']}}/" target="_blank">
+                <img src="../../assets/images/imdb_logo_rectangle.png" alt="IMDB Logo">
+            </a>
+        </div>
+    </div>
+    <div class="right">
+        <h1>{{movieData['title']}}</h1>
+        <h3>{{movieData['tagline']}}</h3>
+        <h4>Release: {{movieData['release_date'] | date:'mediumDate'}}</h4>
+        <p>Genre: <span *ngFor="let genre of movieData['genres']">{{genre['name']}}, </span></p>
+        <p>&#9866; {{movieData['overview']}}</p>
+        <p>Runtime: {{movieData['runtime'] / 60 | number:'2.0-0'}}h {{movieData['runtime'] % 60}}m</p>
+        <div class="trailer-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
+            </svg>
+            <p>Play Trailer</p>
+        </div>
+    </div>
+</main>
+
+<!-- [style.background-image]="'url(https://image.tmdb.org/t/p/original/'+movieData['backdrop_path']+')'" -->

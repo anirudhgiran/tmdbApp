@@ -1,0 +1,47 @@
+$font-head: 'Merriweather', serif;
+$font-all: 'Merriweather Sans', sans-serif;
+
+main.searchPage{
+    position: relative;
+    width: 80%;
+    height: auto;
+    min-height: calc(100vh - 200px);
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .btns{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        button{
+            position: relative;
+            background: #fff;
+            font-family: $font-all;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-right: 5px;
+            cursor: pointer;
+            outline: none;
+
+            &:hover{
+                filter: brightness(0.8);
+            }
+        }
+
+        .active{
+            background: rgb(39, 156, 185);
+        }
+    }
+}

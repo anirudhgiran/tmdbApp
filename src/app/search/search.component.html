@@ -1,0 +1,8 @@
+<main class="searchPage">
+    <div class="btns">
+        <button (click)="showMovie()" [class.active]="isMovie">Movies</button>
+        <button (click)="showTv()" [class.active]="isTv">Tv Shows</button>
+    </div>
+    <app-searchresult *ngIf="searchText&&isMovie" [type]="type_movie" [searchText]="searchText"></app-searchresult>
+    <app-searchresult *ngIf="searchText&&isTv" [type]="type_tv" [searchText]="searchText"></app-searchresult>
+</main>

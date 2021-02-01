@@ -1,0 +1,53 @@
+$font-head: 'Merriweather', serif;
+$font-all: 'Merriweather Sans', sans-serif;
+
+
+footer{
+    position: relative;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        position: relative;
+        text-transform: uppercase;
+        font-family: $font-all;
+    }
+
+    .social{
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                position: relative;
+                margin-left: 25px;
+                width: 30px;
+                height: 30px;
+                fill: #cecece;
+                cursor: pointer;
+    
+                &:hover{
+                    fill: #000;
+                }
+            }
+        }
+    }
+}

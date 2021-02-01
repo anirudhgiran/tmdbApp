@@ -1,0 +1,111 @@
+$font-head: 'Merriweather', serif;
+$font-all: 'Merriweather Sans', sans-serif;
+
+header{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    .logo{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            position: relative;
+            text-decoration: none;
+            color: #000;
+            font-size: 32px;
+            font-family: $font-head;
+        }
+    }
+
+    nav{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg{
+                position: relative;
+                fill: rgba(0,0,0,0.5);
+            }
+
+            &:hover svg{
+                fill: #000;
+            }
+        }
+
+        .input{
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: 25px;
+            background: #cecece;
+            border-radius: 5px;
+            padding: 5px 0;
+            
+            .svg{
+                position: relative;
+                height: 100%;
+                background: #fff;
+                margin-right: 5px;
+                width: 45px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                outline: none;
+
+                svg{
+                    position: relative;
+                    width: 24px;
+                    margin-right: 2px;
+                    fill: #000;
+                    background: transparent;
+                    padding: 2px;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+            }
+
+            &:hover .svg{
+                background: #000;
+            }
+
+            &:hover .svg>svg{
+                fill:#fff;
+            }
+
+            input{
+                position: relative;
+                height: 100%;
+                border: none;
+                outline: none;
+                margin-left: 5px;
+                font-family: $font-all;
+                margin-left: 2px;
+                padding-left: 15px;
+                padding-right: 15px;
+                background: transparent;
+            }
+        }
+    }
+}
