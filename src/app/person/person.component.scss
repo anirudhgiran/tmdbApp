@@ -99,6 +99,49 @@ main.personSection {
       text-align: justify;
       display: inline-block;
       margin-right: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width:700px){
+  main.personSection{
+    grid-template-columns: 1fr;
+
+    .left{
+      border-radius: unset;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+
+      .links{
+        justify-content: center;
+      }
+    }
+
+    .right{
+      border-radius: unset;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+  }
+}
+
+@media screen and (max-width:480px){
+  main.personSection{
+    .right{
+      h1{
+        font-size: 24px;
+      }
+      h3{
+        font-size: 18px;
+      }
+      h4{
+        font-size: 14px;
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
     }
   }
 }

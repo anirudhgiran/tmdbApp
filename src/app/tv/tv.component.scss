@@ -115,3 +115,44 @@ main.tvSection {
     }
   }
 }
+
+@media screen and (max-width:700px){
+  main.tvSection{
+    grid-template-columns: 1fr;
+
+    .left{
+      border-radius: unset;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    .right{
+      border-radius: unset;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+
+      .trailer-btn{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px){
+  main.tvSection{
+    .right{
+      h1{
+        font-size: 24px;
+      }
+      h3{
+        font-size: 18px;
+      }
+      h4{
+        font-size: 14px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
