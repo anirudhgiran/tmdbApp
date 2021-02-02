@@ -1,1 +1,18 @@
-<p>person works!</p>
+<main class="tvSection">
+    <div class="left">
+        <img src="https://image.tmdb.org/t/p/original/{{personData['profile_path']}}" alt="{{personData['name']}} poster">
+        <div class="links">
+            <a *ngIf="personData['imdb_id']" href="https://www.imdb.com/name/{{personData['imdb_id']}}/" target="_blank">
+                <img src="../../assets/images/imdb_logo_rectangle.png" alt="IMDB Logo">
+            </a>
+        </div>
+    </div>
+    <div class="right">
+        <h1>{{personData['name']}}</h1>
+        <h3>Born: {{personData['birthday'] | date:'mediumDate'}}</h3>
+        <h4>Birthplace: {{personData['place_of_birth']}}</h4>
+        <p>&#9866; {{personData['biography']}}</p>
+    </div>
+</main>
+
+<!-- [style.background-image]="'url(https://image.tmdb.org/t/p/original/'+movieData['backdrop_path']+')'" -->
