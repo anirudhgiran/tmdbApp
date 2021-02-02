@@ -5,13 +5,14 @@ main.tvSection {
   position: relative;
   width: 80%;
   height: auto;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 270px);
   margin: 35px auto;
   background: #fff;
   border-radius: 25px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -74,7 +75,7 @@ main.tvSection {
 
       &:nth-of-type(2){
         margin-top: 15px;
-        display: inline-block;
+        display: block;
         margin-right: 25px;
         text-align: justify;
       }
